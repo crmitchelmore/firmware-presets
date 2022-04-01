@@ -1,9 +1,9 @@
-#$ TITLE: The Heat
+#$ TITLE: Racing Drone Setup
 #$ FIRMWARE_VERSION: 4.3
 #$ CATEGORY: other
 #$ STATUS: COMMUNITY
 #$ KEYWORDS:  vtx, filters, other, modes, osd, tune, rates, rc_link
-#$ AUTHOR: Chris TheHeat Mitchelmore
+#$ AUTHOR: TheHeat
 #$ DESCRIPTION: My default drone setup and for 65mm, 3" and 5" race
 #$ FORCE_OPTIONS_REVIEW: TRUE
 
@@ -259,6 +259,7 @@ vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665 5645 5885 5905 5925 5945
 vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
 vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
 vtxtable band 6 LOWRACE  L FACTORY 5333 5373 5413 5453 5493 5533 5573 5613
+
 #$ OPTION_GROUP BEGIN: VTX (choose one):
 
 #$ OPTION BEGIN (UNCHECKED): Meteor65 pro
@@ -296,10 +297,6 @@ vtxtable powerlabels 25 200 600 1200
 
 #$ OPTION_GROUP END
 
-set vtx_band = 5
-set vtx_channel = 1
-set vtx_power = 1
-
 
 #$ OPTION_GROUP BEGIN: Drone:
 
@@ -308,13 +305,11 @@ feature -AIRMODE
 feature -RX_SERIAL
 feature RX_SPI
 set rx_spi_protocol = EXPRESSLRS
-
 set rpm_filter_harmonics = 3
 set rpm_filter_q = 500
 set rpm_filter_min_hz = 100
 set rpm_filter_fade_range_hz = 50
 set rpm_filter_lpf_hz = 150
-
 set gyro_hardware_lpf = NORMAL
 set gyro_lpf1_type = PT1
 set gyro_lpf1_static_hz = 250
@@ -339,14 +334,10 @@ set gyro_lpf1_dyn_min_hz = 250
 set gyro_lpf1_dyn_max_hz = 500
 set gyro_lpf1_dyn_expo = 5
 set gyro_filter_debug_axis = ROLL
-
 set motor_pwm_protocol = DSHOT300
 set motor_poles = 12
 set dshot_idle_value = 650
-
 set bat_capacity = 300
-
-
 profile 0
 set profile_name = -
 set dterm_lpf1_dyn_min_hz = 75
@@ -445,8 +436,6 @@ set simplified_pitch_pi_gain = 100
 set simplified_dterm_filter = ON
 set simplified_dterm_filter_multiplier = 100
 rateprofile 0
-
-# rateprofile 0
 set rateprofile_name = -
 set thr_mid = 50
 set thr_expo = 0
@@ -471,11 +460,7 @@ set pitch_rate_limit = 1998
 set yaw_rate_limit = 1998
 set roll_level_expo = 0
 set pitch_level_expo = 0
-
-
 rateprofile 1
-
-# rateprofile 1
 set rateprofile_name = -
 set thr_mid = 50
 set thr_expo = 0
@@ -500,10 +485,7 @@ set pitch_rate_limit = 1998
 set yaw_rate_limit = 1998
 set roll_level_expo = 0
 set pitch_level_expo = 0
-
 rateprofile 2
-
-# rateprofile 2
 set rateprofile_name = -
 set thr_mid = 50
 set thr_expo = 0
@@ -538,7 +520,6 @@ set rx_spi_protocol = EXPRESSLRS
 #$ OPTION END
 
 #$ OPTION BEGIN (UNCHECKED): 3" 1404
-
 set rpm_filter_harmonics = 3
 set rpm_filter_q = 500
 set rpm_filter_min_hz = 100
@@ -546,7 +527,6 @@ set rpm_filter_fade_range_hz = 100
 set rpm_filter_lpf_hz = 150
 set motor_pwm_protocol = DSHOT600
 set motor_poles = 12
-
 set gyro_hardware_lpf = NORMAL
 set gyro_lpf1_type = PT1
 set gyro_lpf1_static_hz = 0
@@ -571,7 +551,6 @@ set gyro_lpf1_dyn_min_hz = 250
 set gyro_lpf1_dyn_max_hz = 500
 set gyro_lpf1_dyn_expo = 5
 set gyro_filter_debug_axis = ROLL
-
 profile 0
 set profile_name = -
 set dterm_lpf1_dyn_min_hz = 75
@@ -669,7 +648,6 @@ set simplified_pitch_d_gain = 95
 set simplified_pitch_pi_gain = 100
 set simplified_dterm_filter = ON
 set simplified_dterm_filter_multiplier = 100
-
 #$ OPTION END
 
 #$ OPTION BEGIN (UNCHECKED): 5" 
@@ -681,3 +659,6 @@ set motor_poles = 14
 #$ OPTION_GROUP END
 
 rateprofile 0
+set vtx_band = 5
+set vtx_channel = 1
+set vtx_power = 1
