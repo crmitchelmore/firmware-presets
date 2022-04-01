@@ -1,8 +1,8 @@
 #$ TITLE: The Heat
 #$ FIRMWARE_VERSION: 4.3
-#$ CATEGORY: VTX
+#$ CATEGORY: other
 #$ STATUS: COMMUNITY
-#$ KEYWORDS:  vtx
+#$ KEYWORDS:  vtx, filters, other, modes, osd, tune, rates, rc_link
 #$ AUTHOR: Chris TheHeat Mitchelmore
 #$ DESCRIPTION: My default drone setup and for 65mm, 3" and 5" race
 #$ FORCE_OPTIONS_REVIEW: TRUE
