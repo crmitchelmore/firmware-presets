@@ -679,3 +679,5 @@ set motor_poles = 14
 #$ OPTION END
 
 #$ OPTION_GROUP END
+
+rateprofile 0
