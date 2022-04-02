@@ -63,7 +63,7 @@ set feedforward_smooth_factor = 65
 set feedforward_jitter_factor = 3
 set feedforward_boost = 18
 set feedforward_transition = 0
-set feedforward_averaging = 3_POINT
+set feedforward_averaging = 2_POINT
 set feedforward_max_rate_limit = 90
 set rc_smoothing_auto_factor = 25
 set rc_smoothing_auto_factor_throttle = 25
@@ -651,6 +651,7 @@ set simplified_dterm_filter_multiplier = 100
 #$ OPTION END
 
 #$ OPTION BEGIN (UNCHECKED): 5" 
+set vbat_max_cell_voltage = 425
 set bat_capacity = 1350
 set motor_pwm_protocol = DSHOT600
 set motor_poles = 14
