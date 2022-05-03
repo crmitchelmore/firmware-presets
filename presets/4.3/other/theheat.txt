@@ -295,6 +295,13 @@ vtxtable powervalues 0 1 2 3
 vtxtable powerlabels 25 200 600 1200
 #$ OPTION END
 
+#$ OPTION BEGIN (UNCHECKED): Happymodel - OVX303
+vtxtable bands 6
+vtxtable powerlevels 5
+vtxtable powervalues 1 2 14 20 26
+vtxtable powerlabels 0 RCE 25 100 400
+#$ OPTION END
+
 #$ OPTION_GROUP END
 
 
