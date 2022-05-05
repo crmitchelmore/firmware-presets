@@ -47,6 +47,8 @@ set max_check = 1985
 
 set deadband = 0
 set yaw_deadband = 0
+set serialrx_provider = CRSF
+set rx_spi_protocol = EXPRESSLRS
 set expresslrs_uid = 21,43,244,74,111,19
 set expresslrs_domain = ISM2400
 set expresslrs_rate_index = 0
@@ -315,7 +317,11 @@ vtxtable powerlabels 0 RCE 25 100 400
 feature -AIRMODE
 feature -RX_SERIAL
 feature RX_SPI
-set rx_spi_protocol = EXPRESSLRS
+feature SOFTSERIAL
+serial 20 1 115200 57600 0 115200
+serial 0 0 115200 57600 0 115200
+serial 1 0 115200 57600 0 115200
+serial 30 2048 115200 57600 0 115200
 set rpm_filter_harmonics = 3
 set rpm_filter_q = 500
 set rpm_filter_min_hz = 100
@@ -523,11 +529,16 @@ set roll_level_expo = 0
 set pitch_level_expo = 0
 #$ OPTION END
 
+#$ OPTION BEGIN (UNCHECKED): ELRS Serieal uart1
+feature RX_SERIAL
+feature -RX_SPI
+serial 0 64 115200 57600 0 115200
+#$ OPTION END
+
 #$ OPTION BEGIN (UNCHECKED): Mobula7 1s
 feature -AIRMODE
 feature -RX_SERIAL
 feature RX_SPI
-set rx_spi_protocol = EXPRESSLRS
 serial 1 2048 115200 57600 0 115200
 #$ OPTION END
 
