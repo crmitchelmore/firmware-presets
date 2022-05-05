@@ -355,6 +355,7 @@ set gyro_filter_debug_axis = ROLL
 set motor_pwm_protocol = DSHOT300
 set motor_poles = 12
 set dshot_idle_value = 650
+set dshot_bidir = ON
 set bat_capacity = 300
 profile 0
 set profile_name = -
@@ -436,7 +437,7 @@ set launch_angle_limit = 0
 set launch_control_gain = 40
 set thrust_linear = 0
 set transient_throttle_limit = 0
-set dyn_idle_min_rpm = 0
+set dyn_idle_min_rpm = 35
 set dyn_idle_p_gain = 50
 set dyn_idle_i_gain = 50
 set dyn_idle_d_gain = 50
