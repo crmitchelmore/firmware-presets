@@ -40,6 +40,7 @@ beacon -RX_LOST
 beacon RX_SET
 
 map AETR1234
+set yaw_motors_reversed = ON
 
 set mid_rc = 1500
 set min_check = 1015
