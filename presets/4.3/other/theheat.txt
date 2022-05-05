@@ -263,6 +263,7 @@ set vtx_band = 5
 set vtx_channel = 1
 set vtx_power = 1
 
+
 #$ OPTION_GROUP BEGIN: VTX (choose one):
 
 #$ OPTION BEGIN (UNCHECKED): Meteor65 pro
@@ -527,6 +528,7 @@ feature -AIRMODE
 feature -RX_SERIAL
 feature RX_SPI
 set rx_spi_protocol = EXPRESSLRS
+serial 1 2048 115200 57600 0 115200
 #$ OPTION END
 
 #$ OPTION BEGIN (UNCHECKED): 3" 1404
